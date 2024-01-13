@@ -44,7 +44,8 @@ h1 {
   box-shadow: 5px 5px;
 }
 
-.addList p {
+.addList p,
+.form label {
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 20px;
@@ -62,8 +63,6 @@ h1 {
 
 #titleNewList,
 #descNewList,
-#dateNewList,
-#timeNewList,
 #tanggalWaktu {
   margin: 5px 0 0;
   border-radius: 10px;
@@ -74,13 +73,9 @@ h1 {
 
 #titleNewList:hover,
 #descNewList:hover,
-#dateNewList:hover,
-#timeNewList:hover,
 #tanggalWaktu:hover,
 #titleNewList:focus,
 #descNewList:focus,
-#dateNewList:focus,
-#timeNewList:focus,
 #tanggalWaktu:focus {
   box-shadow: 2px 2px grey;
 }
@@ -93,20 +88,28 @@ h1 {
   font-size: 20px;
 }
 
-#dateNewList,
-#timeNewList,
 #tanggalWaktu {
   font-size: 20px;
   text-align: center;
 }
 
 #tanggalWaktu {
+  margin: 0;
   font-family: monospace;
+  padding: 8px;
 }
 
 #descNewList {
   resize: vertical;
-  padding: 8px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 20px; 
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 10px; 
 }
 
 textarea::-webkit-resizer,
@@ -114,7 +117,6 @@ textarea::-ms-resizer,
 textarea::-moz-resizer {
   width: 20px;
   height: 20px;
-  background-color: #ccc;
 }
 
 .form div {
@@ -284,6 +286,10 @@ textarea::-moz-resizer {
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  #tanggalWaktu {
+    padding: 4px;
+  }
+
   .list {
     justify-content: space-between;
   }
