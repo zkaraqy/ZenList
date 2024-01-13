@@ -63,7 +63,8 @@ h1 {
 #titleNewList,
 #descNewList,
 #dateNewList,
-#timeNewList {
+#timeNewList,
+#tanggalWaktu {
   margin: 5px 0 0;
   border-radius: 10px;
   outline: none;
@@ -75,10 +76,12 @@ h1 {
 #descNewList:hover,
 #dateNewList:hover,
 #timeNewList:hover,
+#tanggalWaktu:hover,
 #titleNewList:focus,
 #descNewList:focus,
 #dateNewList:focus,
-#timeNewList:focus {
+#timeNewList:focus,
+#tanggalWaktu:focus {
   box-shadow: 2px 2px grey;
 }
 
@@ -91,7 +94,8 @@ h1 {
 }
 
 #dateNewList,
-#timeNewList {
+#timeNewList,
+#tanggalWaktu {
   /* font-family: "Montserrat", sans-serif; */
   font-size: 20px;
   text-align: center;
@@ -280,6 +284,21 @@ h1 {
 }
 
 @media (max-width: 900px) {
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #titleNewList,
+  #descNewList {
+    width: 90%;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1260px) {
   .list {
     justify-content: left;
     gap: 10px;
@@ -296,11 +315,6 @@ h1 {
     gap: 20px;
   }
 
-  .date-list,
-  .time-list {
-    display: none;
-  }
-
   .column {
     width: 90%;
   }
@@ -309,18 +323,10 @@ h1 {
   .column p:last-child {
     display: inline;
   }
-}
-
-/* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-  #titleNewList,
-  #descNewList {
-    width: 90%;
+  .date-list,
+  .time-list {
+    display: none;
   }
-}
-
-/* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */

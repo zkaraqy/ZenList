@@ -11,8 +11,9 @@ submitBttn.addEventListener("click", function () {
 
   const title = document.getElementById("titleNewList");
   const desc = document.getElementById("descNewList");
-  const date = document.getElementById("dateNewList");
-  const time = document.getElementById("timeNewList");
+  // const date = document.getElementById("dateNewList");
+  // const time = document.getElementById("timeNewList");
+  const dateAndTime = document.getElementById("tanggalWaktu");
 
   const content = `
   <p>${counter}.</p>
@@ -24,17 +25,15 @@ submitBttn.addEventListener("click", function () {
       ${desc.value}
     </p>
     <p>
-      <b>Date: </b>${new Date(date.value).toDateString()}
-    </p>
-    <p>
-    <b>Time: </b>${time.value}
+      <b>
+        ${new Date(dateAndTime.value).toUTCString()}
+      </b>
     </p>
   </div>
   <p>
-    ${new Date(date.value).toDateString()}
-  </p>
-  <p>
-    ${time.value}
+    <b>
+      ${new Date(dateAndTime.value).toUTCString()}
+    </b>
   </p>
   <div class="action">
     <div class="delete" alt="delete" title="delete"></div>
