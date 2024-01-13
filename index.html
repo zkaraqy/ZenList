@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="container">
+      <h1>ToDo List by Zka</h1>
+      <section class="addList">
+        <div class="form">
+          <p>Add New ToDo Section</p>
+          <input type="text" id="titleNewList" placeholder="Title" />
+          <textarea id="descNewList" placeholder="descripton"></textarea>
+          <div>
+            <input type="date" id="dateNewList" />
+            <input type="time" id="timeNewList" />
+          </div>
+          <button>
+            <div class="addLogo"></div>
+            Add
+          </button>
+        </div>
+      </section>
+      <span class="line"></span>
+      <section class="ToDo-List">
+        <h1>Your ToDo List</h1>
+        <div class="headerList">
+          <p class="no-list">No</p>
+          <p>Your Tasks</p>
+          <p class="date-list">Date</p>
+          <p class="time-list">Time</p>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

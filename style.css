@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px dotted red;  */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+
+/* body {
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+#container {
+  margin: 15px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.addList {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  background-color: bisque;
+  border-radius: 10px;
+  border: 2px solid gray;
+  box-shadow: 5px 5px;
+}
+
+.addList p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#titleNewList,
+#descNewList,
+#dateNewList,
+#timeNewList {
+  margin: 5px 0 0;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: all 0.3s;
+}
+
+#titleNewList:hover,
+#descNewList:hover,
+#dateNewList:hover,
+#timeNewList:hover,
+#titleNewList:focus,
+#descNewList:focus,
+#dateNewList:focus,
+#timeNewList:focus {
+  box-shadow: 2px 2px grey;
+}
+
+#titleNewList,
+#descNewList {
+  width: 600px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#dateNewList,
+#timeNewList {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 20px;
+  text-align: center;
+}
+
+#descNewList {
+  resize: vertical;
+}
+
+.form div {
+  width: max-content;
+  height: max-content;
+}
+
+.form button {
+  margin: 10px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.form button:hover {
+  border: 2px solid transparent;
+  box-shadow: 2px 2px black;
+}
+
+.form button:active {
+  box-shadow: 0 0;
+}
+
+.addLogo {
+  background-image: url(assets/add.png);
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.line {
+  width: 100%;
+  height: 15px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 5px 5px;
+}
+
+.ToDo-List {
+  margin: 20px 0;
+  width: 100%;
+  min-height: 20px;
+  background-color: cyan;
+  box-shadow: 5px 5px lightseagreen;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ToDo-List h1 {
+  padding: 2px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.headerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.no-list {
+  margin-left: -10px;
+}
+
+.headerList p:nth-child(2) {
+  width: 60%;
+}
+
+.list {
+  margin: 10px 0 0;
+  padding: 10px;
+  width: 100%;
+  height: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  background-color: bisque;
+  border: 5px solid gray;
+  border-radius: 10px;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.list:hover .action {
+  opacity: 1;
+  right: -30px;
+}
+
+.list p:nth-child(3) {
+  margin-top: 12px;
+}
+
+.column {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.column h2,
+.column p {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.column p:nth-child(3),
+.column p:last-child {
+  display: none;
+}
+
+.list p:first-child {
+  padding-left: 5px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  background-color: bisque;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.delete {
+  background-image: url(assets/delete.png);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .line {
+    width: 95vw;
+  }
+
+  .addList,
+  .ToDo-List {
+    width: 95vw;
+    margin: 10px;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .list {
+    justify-content: space-between;
+  }
+
+  .list:hover .action {
+    opacity: 1;
+    right: 0px;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .list {
+    justify-content: left;
+    gap: 10px;
+  }
+
+  .list p:nth-child(3),
+  .list p:nth-child(4) {
+    display: none;
+  }
+
+  .headerList {
+    margin-left: 20px;
+    justify-content: left;
+    gap: 20px;
+  }
+
+  .date-list,
+  .time-list {
+    display: none;
+  }
+
+  .column {
+    width: 90%;
+  }
+
+  .column p:nth-child(3),
+  .column p:last-child {
+    display: inline;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #titleNewList,
+  #descNewList {
+    width: 90%;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
+
+/* // XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width */
