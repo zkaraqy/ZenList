@@ -87,7 +87,7 @@ h1 {
 
 #titleNewList,
 #descNewList {
-  width: 600px;
+  width: 80%;
   height: 30px;
   padding: 5px;
   font-size: 20px;
@@ -96,13 +96,25 @@ h1 {
 #dateNewList,
 #timeNewList,
 #tanggalWaktu {
-  /* font-family: "Montserrat", sans-serif; */
   font-size: 20px;
   text-align: center;
 }
 
+#tanggalWaktu {
+  font-family: monospace;
+}
+
 #descNewList {
   resize: vertical;
+  padding: 8px;
+}
+
+textarea::-webkit-resizer,
+textarea::-ms-resizer,
+textarea::-moz-resizer {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
 }
 
 .form div {
