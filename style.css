@@ -44,9 +44,9 @@ h1 {
   box-shadow: 5px 5px;
 }
 
-.addList p,
-.form label {
+.addList p {
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
   text-align: center;
   font-size: 20px;
   padding: 10px;
@@ -63,7 +63,7 @@ h1 {
 
 #titleNewList,
 #descNewList,
-#tanggalWaktu {
+#dateTimeNewList {
   margin: 5px 0 0;
   border-radius: 10px;
   outline: none;
@@ -73,10 +73,10 @@ h1 {
 
 #titleNewList:hover,
 #descNewList:hover,
-#tanggalWaktu:hover,
+#dateTimeNewList:hover,
 #titleNewList:focus,
 #descNewList:focus,
-#tanggalWaktu:focus {
+#dateTimeNewList:focus {
   box-shadow: 2px 2px grey;
 }
 
@@ -88,12 +88,12 @@ h1 {
   font-size: 20px;
 }
 
-#tanggalWaktu {
+#dateTimeNewList {
   font-size: 20px;
   text-align: center;
 }
 
-#tanggalWaktu {
+#dateTimeNewList {
   margin: 0;
   font-family: monospace;
   padding: 8px;
@@ -104,12 +104,12 @@ h1 {
 }
 
 textarea::-webkit-scrollbar {
-  width: 20px; 
+  width: 20px;
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: #ccc; 
-  border-radius: 10px; 
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 textarea::-webkit-resizer,
@@ -120,13 +120,23 @@ textarea::-moz-resizer {
 }
 
 .form div {
-  width: max-content;
-  height: max-content;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form div label {
+  font-size: 18px;
+  font-family: monospace;
 }
 
 .form button {
   margin: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   padding: 5px 10px;
@@ -273,20 +283,19 @@ textarea::-moz-resizer {
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .line {
-    width: 95vw;
-  }
-
   .addList,
   .ToDo-List {
     width: 95vw;
     margin: 10px;
   }
+
+  .line {
+    width: 95vw;
+  }
 }
 
-/* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-  #tanggalWaktu {
+  #dateTimeNewList {
     padding: 4px;
   }
 
@@ -301,19 +310,11 @@ textarea::-moz-resizer {
   }
 }
 
-@media (max-width: 900px) {
-}
-
-/* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   #titleNewList,
   #descNewList {
     width: 90%;
   }
-}
-
-/* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
 }
 
 @media (max-width: 1260px) {
@@ -346,10 +347,3 @@ textarea::-moz-resizer {
     display: none;
   }
 }
-
-/* // X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
-}
-
-/* // XX-Large devices (larger desktops)
-// No media query since the xxl breakpoint has no upper bound on its width */

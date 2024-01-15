@@ -11,9 +11,7 @@ submitBttn.addEventListener("click", function () {
 
   const title = document.getElementById("titleNewList");
   const desc = document.getElementById("descNewList");
-  // const date = document.getElementById("dateNewList");
-  // const time = document.getElementById("timeNewList");
-  const dateAndTime = document.getElementById("tanggalWaktu");
+  const dateAndTime = document.getElementById("dateTimeNewList");
 
   const content = `
   <p>${counter}.</p>
